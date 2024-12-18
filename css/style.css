@@ -403,69 +403,62 @@ footer {
     line-height: 1.6;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-   
-
-  
-    
-.testimonial {
-    padding: 10px;
-    background-color: #ffffff;
-    margin: auto;
-    width: 80%;
+  #testimonial {
     max-width: 800px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #testimonial h2 {
-    color: #344955;
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 1em;
+    color: #333;
+}
+
+#testimonial img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
 }
 
 #testimonial p {
-    margin-bottom: 20px;
-    text-align: justify; /* Justifies the text */
-    line-height: 1.8; /* Improves readability */
-    width: 90%; /* Ensures the paragraph is centered */
-    max-width: 100%; /* Ensures the paragraph does not exceed the container */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 15px 0;
 }
 
 /* General Image Styles */
 img {
     display: block;
-    margin: 1em auto; /* Centers the images horizontally */
+    margin: 1em auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Centering Images in the Section */
-#testimonial img {
-    display: block;
-    margin: 1em auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    height: auto;
-}
-
-/* Optional: Hover Effects */
+/* Hover Effects on Images */
 #testimonial img:hover {
-    transform: scale(1.05); /* Adds a slight zoom effect */
+    transform: scale(1.05);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Footer */
+footer {
+    background-color: #4b6a8e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+footer p {
+    margin: 0;
+}
+
+
