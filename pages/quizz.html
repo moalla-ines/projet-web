@@ -4,7 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Knowledge Quiz</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* General Reset */
+        body {
+            padding-bottom: 150px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f0f8ff; /* Soft pastel blue */
+            color: #4b6a8e; /* Soft blue-gray for contrast */
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #a3c9d9, #d6a5d6);
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 2px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 1.5px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a2d9ce;
+            text-shadow: 0 0 10px #a2d9ce;
+        }
+
+        /* Section principale */
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        main h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #6c7582; /* Gris-vert doux */
+        }
+
+        main p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .quiz-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 300px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 20px auto;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Result section */
+        #result {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        #result h2 {
+            margin-bottom: 15px;
+        }
+
+        #result p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #4b6a8e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,12 +173,11 @@
                 <li><a href="../pages/event.html">event</a></li>
                 <li><a href="../pages/matieres.html">courses</a></li>
                 <li><a href="../pages/passion.html">passion</a></li>
-                 <li><a href="../pages/quizz.html">quiz</a></li>
+                <li><a href="../pages/quizz.html">quiz</a></li>
                 <li><a href="../pages/temoinage.html">testimony</a></li>
                 <li><a href="../pages/Contact.html">contact</a></li>
-
-
             </ul>
+        </nav> <!-- Fixed closing tag for <nav> -->
     </header>
 
     <main>
@@ -31,86 +185,84 @@
             <form id="quiz-form" name="quizForm">
                 <!-- Question 1 -->
                 <div class="question">
-                    <p>1. What is the capital of France?</p>
-                    <label><input type="radio" name="q1" value="Paris"> Paris</label><br>
-                    <label><input type="radio" name="q1" value="London"> London</label><br>
-                    <label><input type="radio" name="q1" value="Rome"> Rome</label>
+                    <p>1. What does HTML stand for?</p>
+                    <label><input type="radio" name="q1" value="Hyper Text Markup Language"> Hyper Text Markup Language</label><br>
+                    <label><input type="radio" name="q1" value="Home Tool Markup Language"> Home Tool Markup Language</label><br>
+                    <label><input type="radio" name="q1" value="Hyperlinks and Text Markup Language"> Hyperlinks and Text Markup Language</label>
                 </div>
 
                 <!-- Question 2 -->
                 <div class="question">
-                    <p>2. Who painted the Mona Lisa?</p>
-                    <label><input type="radio" name="q2" value="Van Gogh"> Van Gogh</label><br>
-                    <label><input type="radio" name="q2" value="Leonardo da Vinci"> Leonardo da Vinci</label><br>
-                    <label><input type="radio" name="q2" value="Picasso"> Picasso</label>
+                    <p>2. Which tag is used to create a hyperlink in HTML?</p>
+                    <label><input type="radio" name="q2" value="<a>"> &lt;a&gt;</label><br>
+                    <label><input type="radio" name="q2" value="<link>"> &lt;link&gt;</label><br>
+                    <label><input type="radio" name="q2" value="<href>"> &lt;href&gt;</label>
                 </div>
 
                 <!-- Question 3 -->
                 <div class="question">
-                    <p>3. How many continents are there on Earth?</p>
-                    <label><input type="radio" name="q3" value="5"> 5</label><br>
-                    <label><input type="radio" name="q3" value="6"> 6</label><br>
-                    <label><input type="radio" name="q3" value="7"> 7</label>
+                    <p>3. Which property is used to change the background color in CSS?</p>
+                    <label><input type="radio" name="q3" value="background-color"> background-color</label><br>
+                    <label><input type="radio" name="q3" value="color"> color</label><br>
+                    <label><input type="radio" name="q3" value="bg-color"> bg-color</label>
                 </div>
 
                 <!-- Question 4 -->
                 <div class="question">
-                    <p>4. What chemical element is represented by the symbol H?</p>
-                    <label><input type="radio" name="q4" value="Helium"> Helium</label><br>
-                    <label><input type="radio" name="q4" value="Hydrogen"> Hydrogen</label><br>
-                    <label><input type="radio" name="q4" value="Argon"> Argon</label>
+                    <p>4. How do you declare a variable in JavaScript?</p>
+                    <label><input type="radio" name="q4" value="var"> var</label><br>
+                    <label><input type="radio" name="q4" value="let"> let</label><br>
+                    <label><input type="radio" name="q4" value="const"> const</label>
                 </div>
 
                 <!-- Question 5 -->
                 <div class="question">
-                    <p>5. Which planet is known as the Red Planet?</p>
-                    <label><input type="radio" name="q5" value="Mars"> Mars</label><br>
-                    <label><input type="radio" name="q5" value="Jupiter"> Jupiter</label><br>
-                    <label><input type="radio" name="q5" value="Venus"> Venus</label>
+                    <p>5. Which function is used to display a dialog box with a message in JavaScript?</p>
+                    <label><input type="radio" name="q5" value="alert()"> alert()</label><br>
+                    <label><input type="radio" name="q5" value="prompt()"> prompt()</label><br>
+                    <label><input type="radio" name="q5" value="confirm()"> confirm()</label>
                 </div>
 
-                <!-- Question 6 -->
                 <div class="question">
-                    <p>6. What is the largest planet in our solar system?</p>
-                    <label><input type="radio" name="q6" value="Jupiter"> Jupiter</label><br>
-                    <label><input type="radio" name="q6" value="Earth"> Earth</label><br>
-                    <label><input type="radio" name="q6" value="Mars"> Mars</label>
+                    <p>6. Which HTML tag is used to define an internal style sheet?</p>
+                    <label><input type="radio" name="q6" value="<style>"> &lt;style&gt;</label><br>
+                    <label><input type="radio" name="q6" value="<script>"> &lt;script&gt;</label><br>
+                    <label><input type="radio" name="q6" value="<link>"> &lt;link&gt;</label>
                 </div>
 
-                <!-- Question 7 -->
                 <div class="question">
-                    <p>7. Who is known as the 'King of Pop'?</p>
-                    <label><input type="radio" name="q7" value="Michael Jackson"> Michael Jackson</label><br>
-                    <label><input type="radio" name="q7" value="Elvis Presley"> Elvis Presley</label><br>
-                    <label><input type="radio" name="q7" value="Frank Sinatra"> Frank Sinatra</label>
+                    <p>7. In CSS, which property is used to change the font of an element?</p>
+                    <label><input type="radio" name="q7" value="font-family"> font-family</label><br>
+                    <label><input type="radio" name="q7" value="text-font"> text-font</label><br>
+                    <label><input type="radio" name="q7" value="font-style"> font-style</label>
                 </div>
-
-                <!-- Question 8 -->
+                
+              
                 <div class="question">
-                    <p>8. What is the chemical symbol for water?</p>
-                    <label><input type="radio" name="q8" value="H2O"> H₂O</label><br>
-                    <label><input type="radio" name="q8" value="O2"> O₂</label><br>
-                    <label><input type="radio" name="q8" value="CO2"> CO₂</label>
+                    <p>8. What does the CSS property "display: none" do?</p>
+                    <label><input type="radio" name="q8" value="Hides the element"> Hides the element</label><br>
+                    <label><input type="radio" name="q8" value="Deletes the element"> Deletes the element</label><br>
+                    <label><input type="radio" name="q8" value="Shows the element"> Shows the element</label>
                 </div>
-
-                <!-- Question 9 -->
+                
+                
                 <div class="question">
-                    <p>9. Which country is famous for sushi?</p>
-                    <label><input type="radio" name="q9" value="Japan"> Japan</label><br>
-                    <label><input type="radio" name="q9" value="China"> China</label><br>
-                    <label><input type="radio" name="q9" value="Korea"> Korea</label>
+                    <p>9. Which of the following is a valid way to comment in JavaScript?</p>
+                    <label><input type="radio" name="q9" value="// This is a comment"> // This is a comment</label><br>
+                    <label><input type="radio" name="q9" value="/* This is a comment */"> /* This is a comment */</label><br>
+                    <label><input type="radio" name="q9" value="<!-- This is a comment -->"> &lt;!-- This is a comment --&gt;</label>
                 </div>
-
-                <!-- Question 10 -->
+                
+                
                 <div class="question">
-                    <p>10. Who wrote "Romeo and Juliet"?</p>
-                    <label><input type="radio" name="q10" value="William Shakespeare"> William Shakespeare</label><br>
-                    <label><input type="radio" name="q10" value="Mark Twain"> Mark Twain</label><br>
-                    <label><input type="radio" name="q10" value="Charles Dickens"> Charles Dickens</label>
+                    <p>10. What does the CSS property "position: absolute" do?</p>
+                    <label><input type="radio" name="q10" value="Positions the element relative to its nearest positioned ancestor"> Positions the element relative to its nearest positioned ancestor</label><br>
+                    <label><input type="radio" name="q10" value="Positions the element at the top of the page"> Positions the element at the top of the page</label><br>
+                    <label><input type="radio" name="q10" value="Positions the element fixed at the bottom"> Positions the element fixed at the bottom</label>
                 </div>
 
-                <!-- Submit Button -->
-                <button type="button" onclick="corrigerQuiz()" >Submit </button>
+           
+                <button type="button" onclick="corrigerQuiz()">Submit</button>
             </form>
 
             <div id="result"></div>

@@ -1,4 +1,11 @@
 /* Corps global */
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
 body {
     padding-bottom: 150px;
     font-family: 'Arial', sans-serif;
@@ -99,7 +106,7 @@ main p {
 
 /* About Me Section */
 #about-me {
-    padding: 20px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -110,9 +117,13 @@ main p {
     max-width: 900px;
     margin: 0 auto;
 }
-
+.about-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
 .about-image {
-    width: 200px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -129,7 +140,7 @@ main p {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .social-icons a {
@@ -155,6 +166,43 @@ main p {
     object-fit: contain;
 }
 
+#academic-journey {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#academic-journey h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.diploma {
+    margin-bottom: 40px;
+}
+
+.diploma h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.diploma p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.diploma img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 /* Sections supplémentaires */
 .diploma, .skill-category, #internships, #professional-experiences {
     background: #fff;
@@ -362,112 +410,11 @@ footer {
         align-items: center;
     }
 
-    .event {
-        flex-direction: column;
-        text-align: center;
-        
-    }
+   
 
-    .event table {
-        width: 90%;
-        margin: 2rem auto;
-        border-collapse: collapse;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-    }
-
-    .event thead {
-        background-color: #007BFF;
-        color: white;
-    }
-
-    .event thead th {
-        padding: 1rem;
-        text-align: left;
-    }
-
-    .event tbody tr {
-        border-bottom: 1px solid #ddd;
-    }
-
-    .event-text {
-        margin-bottom: 1rem;
-    }
-
-    .event img {
-        max-width: 100%;
-    }
-}
-
-.quiz-container {
-    background-color: #fff; /* Fond blanc */
-    border-radius: 20px; /* Coins arrondis */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    padding: 20px;
-    justify-content: center; /* Center horizontally */
-    align-items: center;  
-    max-width: 1000px;
-    margin: 0 auto; /* Center horizontally */
-    width: 100%; /* Ajustement responsive */
-    text-align: center;
-}
-
-.question {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.question label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: #333;
-}
-
-.question button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: linear-gradient(90deg, #a3c9d9, #d6a5d6);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.question button:hover {
-    background-color: #45a049;
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-#result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-#result  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#result  ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #555;
-}
-#testimonial {
+  
+    
+.testimonial {
     padding: 10px;
     background-color: #ffffff;
     margin: auto;
@@ -475,6 +422,10 @@ footer {
     max-width: 800px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #testimonial h2 {
@@ -484,37 +435,37 @@ footer {
 }
 
 #testimonial p {
-    margin-bottom: 20px; /* Corrects the margin property syntax and sets spacing below the paragraph */
-    text-align: justify; /* Justifies the text for a cleaner appearance */
-    line-height: 1.8; /* Improves readability with balanced spacing between lines */
-    padding: 0 10px; /* Adds horizontal padding for better text spacing within its container */
+    margin-bottom: 20px;
+    text-align: justify; /* Justifies the text */
+    line-height: 1.8; /* Improves readability */
+    width: 90%; /* Ensures the paragraph is centered */
+    max-width: 100%; /* Ensures the paragraph does not exceed the container */
 }
+
 /* General Image Styles */
 img {
     display: block;
     margin: 1em auto; /* Centers the images horizontally */
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effects */
 /* Centering Images in the Section */
 #testimonial img {
-    display: block; /* Ensures the image behaves like a block element */
-    margin: 1em auto; /* Centers the image horizontally */
-    border-radius: 10px; /* Adds rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
-    max-width: 100%; /* Ensures image does not exceed the container width */
-    height: auto; /* Maintains the image's aspect ratio */
+    display: block;
+    margin: 1em auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
 }
 
 /* Optional: Hover Effects */
 #testimonial img:hover {
     transform: scale(1.05); /* Adds a slight zoom effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 
+}
