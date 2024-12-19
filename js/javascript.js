@@ -19,17 +19,17 @@ function corrigerQuiz() {
     const resultDiv = document.getElementById("result"); 
     let feedback = "<h2>Results:</h2><ul>"; 
 
-    Object.keys(bonnesReponses).forEach(question => {
-        // Find the selected radio button for the current question
-        const reponseUtilisateur = reponsesUtilisateur.get(question);
+    Object.keys(bonnesReponses).forEach(question => { //parcouri bil kaaba bil kaaba
+
+        const reponseUtilisateur = reponsesUtilisateur.get(question); //recuperation de la reponse de l'utilisateur
         
-        // If the user didn't select an answer for this question
+        
         if (!reponseUtilisateur) {
             feedback += `<li>Question ${question.slice(1)}: <span style="color: orange;">No answer selected.</span></li>`;
             return;
         }
         
-        // If the selected answer matches the correct answer
+    
         if (reponseUtilisateur === bonnesReponses[question]) {
             score++; // Increment score
             feedback += `<li>Question ${question.slice(1)}: <span style="color: green;">Correct!</span></li>`;
@@ -40,7 +40,7 @@ function corrigerQuiz() {
 
     feedback += "</ul>";
 
-    // Display the score and feedback
+    //afficher le score 
     resultDiv.innerHTML = ` 
         <p>Your score is <strong>${score} / ${Object.keys(bonnesReponses).length}</strong>.</p>
         ${feedback}
